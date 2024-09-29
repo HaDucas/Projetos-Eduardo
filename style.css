@@ -26,17 +26,18 @@ body{
 
 header{
     position: fixed;
-    width: 100%;
+    width: 107%;
     top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 8%;
+    justify-content: left;
+    padding: 20px 8%;
+    min-width: 320;
+    max-width: 800;
 
 }
-
 
 .logo{
     display: flex;
@@ -62,6 +63,8 @@ header{
     font-weight: 500;
     margin: 0 30px;
     transition: a .55s ease;
+    align-items: center;
+   
 }
 
 .navegação a:hover{
@@ -73,6 +76,8 @@ header{
 .header-icons{
     display: flex;
     align-items: center;
+    margin-left: 350px;
+    
 }
 
 #menu{
@@ -83,15 +88,19 @@ header{
 }
 
 .header-icons i{
-    margin-right: 25px;
+    margin-right: 40px;
     font-size: 28px;
     cursor: pointer;
     transition: all .5s ease;
+    max-width: 800px;
+    min-width: 320px;
+    
 }
 
 .header-icons i:hover{
     transform: translateY(-5px);
     color: var(--main-color);
+    
 }
 
 
@@ -110,20 +119,25 @@ header{
 }
 
 .home-text h1{
-    font-size: var(--h1-font);
+    font-size: 50px;
     line-height: 1.2;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
+    min-width: 320px;
+    max-width: 800px;
 }
 
 .home-text h5{
     color: #ffffff99;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 400;
-    margin-bottom: 60px;
+    margin-bottom: 90px;
+    min-width: 320px;
+    max-width: 800px;
+    margin-left: 5%;
 }
 
 .home-text h3{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 35px;
@@ -132,15 +146,16 @@ header{
 
 .home-img img{
     max-width: 100%;
-    width: 28rem;
+    min-width: 50%;
+    width: 35rem;
     height: auto;
-    margin-left: 25%;
+    margin-left: 40%;
 }
 
 
 .btn{
     display: inline-block;
-    padding: 15px 70px;
+    padding: 10px 70px;
     font-size: 16px;
     font-weight: 500;
     background: transparent;
@@ -157,20 +172,26 @@ header{
 
 .main{
     position: absolute;
-    top: 50%;
+    top: 90%;
     left: 3%;
     transform: translateY(-50%);
-    display: flex;
+    display: list-item ;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    justify-content: right;
+    align-items:left;
+    gap: 4rem;
+    
+    min-width: 320px;
+    max-width: 800px;
+   
+
 }
 
 .main li img{
     width: 50px;
     height: auto;
     max-width: 100%;
+    min-width: 40%;
 }
 
 .row{
@@ -220,4 +241,46 @@ header{
 
 .row3:hover{
     transform: translateY(-8px);
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info .box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .painel {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .agendar, .servico-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .somos h2, .descricao h2 {
+    font-size: 24px;
+  }
+
+  .info .box, .painel {
+    width: 100%;
+  }
 }
